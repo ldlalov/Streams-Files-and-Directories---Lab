@@ -9,14 +9,14 @@ namespace _03._Word_Count
     {
         static void Main(string[] args)
         {
-                                Dictionary<string, int> frequencies = new Dictionary<string, int>();
+            Dictionary<string, int> frequencies = new Dictionary<string, int>();
 
             using (StreamReader reader = new StreamReader("../../../words.txt"))
             {
-               string[] words = reader.ReadToEnd().Split();
+                string[] words = reader.ReadToEnd().Split();
                 using (StreamReader reader1 = new StreamReader("../../../input.txt"))
                 {
-                    string[] text = reader1.ReadToEnd().Split(' ', '\r','\n', '-',',','.');//Will be better with Regex
+                    string[] text = reader1.ReadToEnd().Split(' ', '\r', '\n', '-', ',', '.');//Will be better with Regex
                     foreach (var item in words)
                     {
                         if (!frequencies.ContainsKey(item.ToLower()))
